@@ -1,3 +1,4 @@
+-- COC keymaps in Packer/coc.lua
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
@@ -25,7 +26,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)  -- opten file tree
+-- keymap("n", "<leader>e", ":Lex 30<cr>", opts)  -- opten file tree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)  -- opten file tree
+-- nvim-tree-help
+-- -- g?
+keymap("n", "<leader>w", ":w<cr>", opts)  -- opten file tree
+keymap("n", "<leader>q", ":q<cr>", opts)  -- opten file tree
 
 -- 分屏
 keymap("n", "s", "", opts)  -- 取消 s 的默认功能
