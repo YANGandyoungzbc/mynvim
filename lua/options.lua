@@ -1,4 +1,4 @@
-					-- :help options 查看options
+-- :help options 查看options
 local options = {
   backup = false,		          -- 备份文件
   clipboard = "unnamedplus",		  -- 使用系统剪切板
@@ -31,7 +31,7 @@ local options = {
   relativenumber = true,                   -- set relative numbered lines
   numberwidth = 2,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
-  wrap = false,                            -- display lines as one long line
+  wrap = true,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   wildmenu = true,                         -- 补全增强
