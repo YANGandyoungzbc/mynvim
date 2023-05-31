@@ -20,7 +20,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 -- TIPS:
---    C-i and C-o 可以遍历buffer
+--    C-i and C-o 可以遍历buffer;实际上是【下一个操作，上一个操作】
 
 -- Normal --
 -- Better window navigation

@@ -78,12 +78,13 @@ require("lazy").setup({
 
 			null_ls.setup({
 				sources = {
-					-- formatter
+					-- [[ Formatter ]]
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.black,
 					null_ls.builtins.formatting.clang_format,
 					-- null_ls.builtins.formatting.markdownlint,
 					null_ls.builtins.formatting.prettier,
+
 				},
 			})
 		end,
@@ -246,7 +247,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "vsnip" }, -- For vsnip users.
+		-- { name = "vsnip" }, -- For vsnip users.
 		{ name = "luasnip" }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
@@ -341,5 +342,10 @@ require("lspconfig").tsserver.setup({
 
 -- css
 require("lspconfig").cssls.setup({
+	capabilities = capabilities,
+})
+
+-- java
+require("lspconfig").jdtls.setup({
 	capabilities = capabilities,
 })
