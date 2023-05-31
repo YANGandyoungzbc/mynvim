@@ -83,7 +83,7 @@ require("lazy").setup({
 					null_ls.builtins.formatting.black,
 					null_ls.builtins.formatting.clang_format,
 					-- null_ls.builtins.formatting.markdownlint,
-          null_ls.builtins.formatting.prettier,
+					null_ls.builtins.formatting.prettier,
 				},
 			})
 		end,
@@ -114,9 +114,32 @@ require("lazy").setup({
 
 	-- autopairs
 	{
+		-- 自动完成括号
+		-- 自动为选中的function添加括号
 		event = "VeryLazy",
 		"windwp/nvim-autopairs",
 		opts = {},
+	},
+
+	-- nvim-tree
+	{
+		cmd = "NvimTreeToggle",
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		keys = {
+			{ "<leader>e", ":NvimTreeToggle<CR>", desc = "[E]xplorer (NvimTreeToggle)" },
+		},
+		opts = {
+			view = {
+				width = 25,
+				-- float = {
+					-- enable = true,
+				-- },
+			},
+		},
 	},
 })
 
